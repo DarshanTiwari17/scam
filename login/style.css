@@ -1,0 +1,141 @@
+/* Import a futuristic font from Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap');
+
+body {
+    font-family: 'Orbitron', sans-serif; /* Futuristic font */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background: linear-gradient(135deg, #0d1b2a, #1b263b); /* Dark sci-fi gradient */
+    overflow: hidden; /* Prevent scrolling */
+    position: relative;
+}
+
+/* 3D Animated Overlay */
+body::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: radial-gradient(circle, rgba(0, 255, 255, 0.1) 0%, rgba(0, 0, 0, 0.8) 80%);
+    animation: pulse 10s infinite alternate;
+    z-index: -1;
+}
+
+@keyframes pulse {
+    0% { transform: scale(1); opacity: 0.3; }
+    100% { transform: scale(1.2); opacity: 0.5; }
+}
+
+.container {
+    background: rgba(255, 255, 255, 0.05); /* Semi-transparent futuristic glass effect */
+    backdrop-filter: blur(10px); /* Glassmorphism */
+    padding: 30px;
+    box-shadow: 0 0 20px rgba(0, 255, 255, 0.5), inset 0 0 10px rgba(0, 255, 255, 0.3); /* Neon glow */
+    border-radius: 15px;
+    text-align: center;
+    width: 350px;
+    border: 1px solid rgba(0, 255, 255, 0.4); /* Cyan border */
+    transform: perspective(500px) rotateX(10deg); /* 3D tilt */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    position: relative;
+    z-index: 1;
+}
+
+.container:hover {
+    transform: perspective(500px) rotateX(0deg); /* Flatten on hover */
+    box-shadow: 0 0 30px rgba(0, 255, 255, 0.7), inset 0 0 15px rgba(0, 255, 255, 0.5); /* Enhanced glow */
+}
+
+h2 {
+    color: #00ffff; /* Neon cyan */
+    text-shadow: 0 0 10px rgba(0, 255, 255, 0.8);
+    margin-bottom: 20px;
+    letter-spacing: 2px;
+}
+
+input {
+    display: block;
+    width: 100%;
+    margin: 15px 0;
+    padding: 12px;
+    border: 1px solid rgba(0, 255, 255, 0.5); /* Neon border */
+    border-radius: 5px;
+    background: rgba(255, 255, 255, 0.1);
+    color: #fff;
+    font-family: 'Orbitron', sans-serif;
+    text-shadow: 0 0 5px rgba(0, 255, 255, 0.5);
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+input:focus {
+    border-color: #00ffff;
+    box-shadow: 0 0 10px rgba(0, 255, 255, 0.8);
+    outline: none;
+}
+
+input::placeholder {
+    color: rgba(0, 255, 255, 0.7);
+}
+
+button {
+    background: linear-gradient(45deg, #00ffff, #00b7eb); /* Neon gradient */
+    color: #000;
+    border: none;
+    padding: 12px;
+    width: 100%;
+    border-radius: 5px;
+    cursor: pointer;
+    font-family: 'Orbitron', sans-serif;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    box-shadow: 0 0 15px rgba(0, 255, 255, 0.6);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+button:hover {
+    background: linear-gradient(45deg, #00b7eb, #00ffff);
+    transform: translateY(-3px); /* Slight lift */
+    box-shadow: 0 0 25px rgba(0, 255, 255, 0.9);
+}
+
+a {
+    color: #00ffff; /* Neon cyan */
+    text-decoration: none;
+    text-shadow: 0 0 5px rgba(0, 255, 255, 0.5);
+    transition: color 0.3s ease;
+}
+
+a:hover {
+    color: #ffffff;
+    text-decoration: underline;
+    text-shadow: 0 0 10px rgba(0, 255, 255, 0.8);
+}
+
+p {
+    color: rgba(255, 255, 255, 0.8);
+    text-shadow: 0 0 5px rgba(0, 255, 255, 0.3);
+}
+
+/* Dashboard specific styles */
+#dashboard a {
+    display: inline-block;
+    margin-top: 10px;
+    padding: 10px 20px;
+    background: linear-gradient(45deg, #00ffff, #00b7eb);
+    color: #000;
+    border-radius: 5px;
+    text-decoration: none;
+    box-shadow: 0 0 15px rgba(0, 255, 255, 0.6);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+#dashboard a:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 0 25px rgba(0, 255, 255, 0.9);
+}
